@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>List of Authors</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Picture</th>
+        </tr>
+        {% for author in authors %}
+        <tr>
+            <td>{{ author.authorname }}</td>
+            <td><img src="{{ asset(author.picture) }}"  ></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1> the nbr of authors {{authors|length }}</h1>
+</body>
+</html>
+
+
+       
